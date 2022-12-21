@@ -28,9 +28,9 @@ export default function FileSnapshot({file, onAddDataset}) {
 
   const toggleSelect = columnID => {
     if (includedCols.includes(columnID)) {
-      setIncludedCols(includedCols.filter(id => id !== columnID));
-    } else {
       setIncludedCols([...includedCols, columnID]);
+    } else {
+      setIncludedCols(includedCols.filter(id => id !== columnID));
     }
   };
 
