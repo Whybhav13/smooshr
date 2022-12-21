@@ -28,15 +28,15 @@ export default function FileSnapshot({file, onAddDataset}) {
 
   const toggleSelect = columnID => {
     if (includedCols.includes(columnID)) {
-      setIncludedCols([...includedCols, columnID]);
-    } else {
       setIncludedCols(includedCols.filter(id => id !== columnID));
+    } else {
+      setIncludedCols([...includedCols, columnID]);
     }
   };
 
   const toggleSelectAll = () => {
     // If all selected, de-select all. Otherwise select all.
-    if(includedCols.length == columns.length) {
+    if(includedCols.length === columns.length) {
       setIncludedCols([])
     } else {
       setIncludedCols(columns.map(c => c.id))
@@ -95,10 +95,10 @@ export default function FileSnapshot({file, onAddDataset}) {
           )}
         </div>
         <div className="file-snapshot-header-buttons">
-          <h3>Select All</h3>
+          <h3>Deselect All</h3>
           <input
             type="checkbox"
-            checked={includedCols.length == columns.length}
+            checked={includedCols.length === columns.length}
             onChange={toggleSelectAll}
           />
         </div>

@@ -1117,6 +1117,7 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 .file-uploader .content {
@@ -1127,10 +1128,12 @@ p {
   grid-template-rows: 1fr;
   justify-content: center;
   align-content: center;
+  overflow: scroll;
 }
 
 .file-uploader .content > div {
   height: 100%;
+  overflow: scroll;
 }
 
 .file-tab {
