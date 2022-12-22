@@ -95,7 +95,7 @@ export default function FileSnapshot({file, onAddDataset}) {
           )}
         </div>
         <div className="file-snapshot-header-buttons">
-          <h3>Deselect All</h3>
+          <h3>Select All</h3>
           <input
             type="checkbox"
             checked={includedCols.length === columns.length}
